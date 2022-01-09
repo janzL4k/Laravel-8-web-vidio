@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <div class="container-scroller d-flex">
+    <div class="container-scroller d-flex ">
         <!-- partial:./partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <ul class="nav">
@@ -48,10 +48,9 @@
                     <div class="collapse" id="ui-basic">
                         <ul class="nav flex-column sub-menu">
                             {{-- {{-- <li class="nav-item"> <a class="nav-link" href="admin/pages/ui-features/buttons.html">Buttons</a></li> --}}
-                            <li class="nav-item"> <a class="nav-link" href="#">Fantasy</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="#">Magic</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="#">Advanture</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="#">Comedy</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="upload.sepakbola">Sepak Bola</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="upload.basket">Bola Basket</a></li>
+
                         </ul>
                     </div>
                 </li>

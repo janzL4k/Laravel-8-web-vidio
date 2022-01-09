@@ -11,13 +11,6 @@
         </ul>
     </div>
     <div class="navbar-menu-wrapper navbar-search-wrapper d-none d-lg-flex align-items-center">
-        {{-- <ul class="navbar-nav mr-lg-2">
-            <li class="nav-item nav-search d-none d-lg-block">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search Here..."
-                        aria-label="search" aria-describedby="search">
-                </div>
-            </li> --}}
         </ul>
         <ul class="navbar-nav navbar-nav-right container" style="float: right">
             <li class="nav-item nav-profile dropdown">

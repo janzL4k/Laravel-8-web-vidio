@@ -24,15 +24,21 @@ Route::get('/', function () {
 
 
 // route admin/backend===========
-Route::get('backend', function () {
-    return view('admin.dashboard.index');
-});
-Route::get('backend', function () {
-    return view('admin.dashboard.index');
-});
-
 Route::get('backend.dashboard', function () {
     return view('admin.dashboard.index');
 });
-// 3 route route  admin diataas jgn di ubah lanjutin route backend make controller
 
+
+
+// Route Sepak Bola
+Route::get('upload.sepakbola', function () {
+    return view('admin.upload_sepakbola.show');
+});
+// Route::get('upload.sepakbola', function () {
+//     return view('admin.upload_sepakbola.index');
+// });
+
+//Route Bola BAsket
+Route::get('upload.basket', function () {
+    return view('admin.upload_bolabasket.show');
+});
