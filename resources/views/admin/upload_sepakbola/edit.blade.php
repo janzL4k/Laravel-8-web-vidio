@@ -8,7 +8,7 @@
                     <p class="card-description">
                         Upload Khusus Vidio Sepak Bola
                     </p>
-                    <form method="POST" class="forms-sample">
+                    <form class="forms-sample">
                         <div class="form-group">
                             <label for="exampleInputName1">Judul Video</label>
                             <input type="text" class="form-control" id="exampleInputName1" placeholder="Judul">

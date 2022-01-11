@@ -4,7 +4,11 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Daftar Vidio</h4>
-                <br>
+                <br>    <a href="{{ route("create.index") }}">
+                <button  class="btn btn-rounded btn-success mr-2 btn-sm float-right"
+              {{-- data-id="{{ $j_kategori->id }}" data-name="{{ $j_kategori->kategori }}"
+                data-slug="{{ $j_kategori->slug }}"> --}}>
+                <i class="mdi mdi-plus-circle-outline">Tambah Video</i></button></a>
                 <div class="table-responsive">
                     <table class="table table-hover text-center">
                         <thead>
@@ -29,10 +33,10 @@
                                     labore voluptatum.</td>
                                 <td>
                                     <div class="d-flex d-inline justify-content-center">
-                                        <button class="btn btn-success mr-2 btn-sm" data-toggle="modal"
+                                        <a href="{{ route("sepakbola.edit") }}"><button class="btn btn-success mr-2 btn-sm" data-toggle="modal"
                                             data-target="#editSubject" {{-- data-id="{{ $j_kategori->id }}" data-name="{{ $j_kategori->kategori }}"
                                             data-slug="{{ $j_kategori->slug }}"> --}}>
-                                            <i class="mdi mdi-plus-circle-outline"></i></button>
+                                            <i class="mdi mdi-pencil"></i></button></a>
                                         <form method="post">
                                             @csrf
                                             {{-- @method('DELETE') --}}
