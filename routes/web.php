@@ -19,11 +19,6 @@ Route::get('/', function () {
     return view('frontend.halaman-utama.index');
 });
 
-
-
-
-
-
 // route admin/backend===========
 Route::get('backend.dashboard', function () {
     return view('admin.dashboard.index');

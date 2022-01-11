@@ -9,7 +9,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Website Anime | 2022</title>
+    <title>Website Olahraga | 2022</title>
 
     <!-- Favicon -->
     <link rel="icon" href="frontend/img/core-img/favicon.ico">
