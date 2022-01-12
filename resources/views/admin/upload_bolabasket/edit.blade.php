@@ -4,9 +4,9 @@
         <div class="col-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Upload Vidio Sepak Bola</h4>
+                    <h4 class="card-title">Upload Vidio Bola Basket</h4>
                     <p class="card-description">
-                        Upload Khusus Vidio Sepak Bola
+                        Upload Khusus Vidio Bola Basket
                     </p>
                     <form class="forms-sample">
                         <div class="form-group">

@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Admin C2Project</title>
+    <title>Admin</title>
     <!-- base:css -->
     <link rel="stylesheet" href="admin/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="admin/vendors/css/vendor.bundle.base.css">
@@ -48,8 +48,8 @@
                     <div class="collapse" id="ui-basic">
                         <ul class="nav flex-column sub-menu">
                             {{-- {{-- <li class="nav-item"> <a class="nav-link" href="admin/pages/ui-features/buttons.html">Buttons</a></li> --}}
-                            <li class="nav-item"> <a class="nav-link" href="upload.sepakbola">Sepak Bola</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="upload.basket">Bola Basket</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="{{ route('upload.sepakbola') }}">Sepak Bola</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="{{ route('upload.basket') }}">Bola Basket</a></li>
 
                         </ul>
                     </div>

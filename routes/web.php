@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 // use Illuminate\sepakbolaController;
-use App\Http\Controllers\sepakbolaController;
+use App\Http\Controllers\SepakbolaController;
+use App\Http\Controllers\BolabasketController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,26 +25,21 @@ Route::get('backend.dashboard', function () {
     return view('admin.dashboard.index');
 });
 
+
+// route bola basket
+Route::get('upload.bolabasket', [BolabasketController::class, 'index'])->name('upload.basket');
+Route::get('create.basket', [BolabasketController::class, 'create'])->name('create.basket');
+Route::get('bolabasket.edit', [BolabasketController::class, 'edit'])->name('bolabasket.edit');
+
+
 // Route Sepak Bola
 // Route::get('upload.sepakbola', function () {
-//     return view('admin.upload_sepakbola.show');
+//     return view('admin.upload_sepakbola.show');s
 // });
-Route::get('upload.sepakbola', [sepakbolaController::class, 'show'])->name('upload.sepakbola');
-Route::get('create.index', [sepakbolaController::class, 'index'])->name('create.index');
-Route::get('sepakbola.edit', [sepakbolaController::class, 'edit'])->name('sepakbola.edit');
+Route::get('upload.sepakbola', [SepakbolaController::class, 'index'])->name('upload.sepakbola');
+Route::get('create.sepakbola', [SepakbolaController::class, 'create'])->name('create.sepakbola');
+Route::get('sepakbola.edit', [SepakbolaController::class, 'edit'])->name('sepakbola.edit');
 
 
 
 
-
-
-
-
-
-
-
-
-//Route Bola BAsket
-Route::get('upload.basket', function () {
-    return view('admin.upload_bolabasket.show');
-});

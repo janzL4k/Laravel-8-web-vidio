@@ -8,7 +8,8 @@
                     <p class="card-description">
                         Upload Khusus Vidio Sepak Bola
                     </p>
-                    <form class="forms-sample">
+                    <form method="POST" action="#" forms-sample">
+                          @csrf
                         <div class="form-group">
                             <label for="exampleInputName1">Judul Video</label>
                             <input type="text" class="form-control" id="exampleInputName1" placeholder="Judul">
@@ -34,5 +35,7 @@
                 </div>
             </div>
         </div>
+
+
     </div>
 @endsection

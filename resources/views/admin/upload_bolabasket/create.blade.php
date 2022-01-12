@@ -4,11 +4,12 @@
         <div class="col-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Upload Vidio Sepak Bola</h4>
+                    <h4 class="card-title">Upload Vidio</h4>
                     <p class="card-description">
-                        Upload Khusus Vidio Sepak Bola
+                        Upload Khusus Vidio Bola Basket
                     </p>
                     <form class="forms-sample">
+                        @csrf
                         <div class="form-group">
                             <label for="exampleInputName1">Judul Video</label>
                             <input type="text" class="form-control" id="exampleInputName1" placeholder="Judul">
@@ -34,5 +35,7 @@
                 </div>
             </div>
         </div>
+
+
     </div>
 @endsection

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class SepakbolaController extends Controller
+class BolabasketController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class SepakbolaController extends Controller
      */
     public function index()
     {
-        return view("admin.upload_sepakbola.index");
+        return view("admin.upload_bolabasket.index");
     }
 
     /**
@@ -23,7 +23,7 @@ class SepakbolaController extends Controller
      */
     public function create()
     {
-        return view("admin.upload_sepakbola.create");
+        return view("admin.upload_bolabasket.create");
     }
 
     /**
@@ -34,7 +34,7 @@ class SepakbolaController extends Controller
      */
     public function store(Request $request)
     {
-         
+        //
     }
 
     /**
@@ -56,7 +56,7 @@ class SepakbolaController extends Controller
      */
     public function edit($id)
     {
-        return view("admin.upload_sepakbola.edit");
+        
     }
 
     /**
