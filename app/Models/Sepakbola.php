@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sepakbola extends Model
 {
-    use HasFactory;
+    protected $table = 'tb_sepakbola';
+    protected $guarded = [];
+
 }

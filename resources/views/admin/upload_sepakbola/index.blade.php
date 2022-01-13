@@ -3,51 +3,53 @@
     <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Daftar Vidio</h4>
-                <br>    <a href="{{ route("create.sepakbola") }}">
-                <button  class="btn btn-rounded btn-success mr-2 btn-sm float-right"
-              {{-- data-id="{{ $j_kategori->id }}" data-name="{{ $j_kategori->kategori }}"
+                <h4 class="card-title">Daftar Vidio bola</h4>
+                <br> <a href="{{ route('create.sepakbola') }}">
+                    <button class="btn btn-rounded btn-success mr-2 btn-sm float-right" {{-- data-id="{{ $j_kategori->id }}" data-name="{{ $j_kategori->kategori }}"
                 data-slug="{{ $j_kategori->slug }}"> --}}>
-                <i class="mdi mdi-plus-circle-outline">Tambah Video</i></button></a>
+                        <i class="mdi mdi-plus-circle-outline">Tambah Video</i></button></a>
                 <div class="table-responsive">
                     <table class="table table-hover text-center">
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Vidio</th>
-                                <th>Judul Vidio</th>
+                                <th>Judul</th>
                                 <th>Deskripsi</th>
+                                <th>Video</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td> <iframe width="100" height="100" src="https://www.youtube.com/embed/CNbmVEEW-mA"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe></td>
-                                <td> Dilan new Video Songs </td>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ut error quia perspiciatis
-                                    in nihil sunt molestias at eum fuga. Culpa cumque quas vel neque magni! Quae repudiandae
-                                    labore voluptatum.</td>
-                                <td>
-                                    <div class="d-flex d-inline justify-content-center">
-                                        <a href="{{ route("sepakbola.edit") }}"><button class="btn btn-success mr-2 btn-sm" data-toggle="modal"
-                                            data-target="#editSubject" {{-- data-id="{{ $j_kategori->id }}" data-name="{{ $j_kategori->kategori }}"
-                                            data-slug="{{ $j_kategori->slug }}"> --}}>
-                                            <i class="mdi mdi-pencil"></i></button></a>
-                                        <form method="post">
-                                            @csrf
-                                            {{-- @method('DELETE') --}}
-                                            <button type="submit" class="btn btn-danger btn-sm"
-                                                onclick="return confirm('Apa Anda yakin ?');"><i
-                                                    class="mdi mdi-delete"></i></button>
-                                        </form>
-                                    </div>
-                                </td>
-                            </tr>
+                            @foreach ($sepakbola as $sepakbolas)
 
+
+                                <tr>
+                                    <td>{{ $sepakbolas->id }}</td>
+                                    <td> {{ $sepakbolas->judul_video }} </td>
+                                    <td> {{ $sepakbolas->deskripsi }} </td>
+                                    <td>
+                                        <video width="200" height="200" controls preload="metadata">
+                                            <source src=" {{ 'uploads_sepakbola/' . $sepakbolas->video }} "
+                                                type="video/mp4" />
+                                        </video>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex d-inline justify-content-center">
+                                            <a href="{{ route('sepakbola.edit', $sepakbolas->id) }}"><button
+                                                    class="btn btn-success mr-2 btn-sm" {{-- data-id="{{ $j_kategori->id }}" data-name="{{ $j_kategori->kategori }}"
+                                            data-slug="{{ $j_kategori->slug }}"> --}}>
+                                                    <i class="mdi mdi-pencil"></i></button></a>
+                                            <form method="post">
+                                                @csrf
+                                                {{-- @method('DELETE') --}}
+                                                <button type="submit" class="btn btn-danger btn-sm"
+                                                    onclick="return confirm('Apa Anda yakin ?');"><i
+                                                        class="mdi mdi-delete"></i></button>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

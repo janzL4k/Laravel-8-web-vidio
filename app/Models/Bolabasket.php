@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Bolabasket extends Model
 {
-    use HasFactory;
+    protected $table = 'tb_bolabasket';
+    protected $guarded = [];
 }

@@ -15,7 +15,7 @@ class CreateTbBolabasket extends Migration
     {
         Schema::create('tb_bolabasket', function (Blueprint $table) {
             $table->id();
-            $table->string('judul video');
+            $table->string('judul_video');
             $table->string('deskripsi');
             $table->string('video');
             $table->timestamps();

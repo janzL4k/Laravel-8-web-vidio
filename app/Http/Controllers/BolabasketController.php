@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+// use App\Models\Sepakbola;
+use App\Models\Bolabasket;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class BolabasketController extends Controller
 {
@@ -13,7 +16,8 @@ class BolabasketController extends Controller
      */
     public function index()
     {
-        return view("admin.upload_bolabasket.index");
+        $basket = Bolabasket::all();
+        return view("admin.upload_bolabasket.index", compact('basket'));
     }
 
     /**
@@ -23,6 +27,7 @@ class BolabasketController extends Controller
      */
     public function create()
     {
+
         return view("admin.upload_bolabasket.create");
     }
 
@@ -34,7 +39,20 @@ class BolabasketController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
+        $video = $request->file('inputvideo');
+        $namevideo =time() . "_" .$video->getClientOriginalName();
+        $path = public_path().'/uploads/';
+        $video->move($path, $namevideo);
+
+        $basket = Bolabasket::create([
+
+            'judul_video' => $request->title,
+            'deskripsi' => $request->deskripsi,
+            'video' => $namevideo,
+        ]);
+
+        return redirect(route('upload.sepakbola'))->with('success','Data berhasil ditambahkan');
     }
 
     /**
@@ -56,7 +74,7 @@ class BolabasketController extends Controller
      */
     public function edit($id)
     {
-        
+
     }
 
     /**

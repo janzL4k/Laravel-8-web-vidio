@@ -15,7 +15,7 @@ class CreateTbSepakbola extends Migration
     {
         Schema::create('tb_sepakbola', function (Blueprint $table) {
             $table->id();
-            $table->string('judul video');
+            $table->string('judul_video');
             $table->string('deskripsi');
             $table->string('video');
             $table->timestamps();
