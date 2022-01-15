@@ -41,7 +41,7 @@ class SepakbolaController extends Controller
     public function store(Request $request)
     {
         $video = $request->file('inputvideo');
-        $namevideo =time() . "_" .$video->getClientOriginalName();
+        $namevideo =time() . '.' .$video->getClientOriginalName();
         $path = public_path().'/uploads_sepakbola/';
         $video->move($path, $namevideo);
 
@@ -92,27 +92,15 @@ class SepakbolaController extends Controller
             $sepakbola->deskripsi = $request->deskripsi;
 
             $video =$request->video;
-            $namevideo =  $video->getClientOriginalName();
-            // $sepakbola = Sepakbola::file('inputvideo')->getClientOriginalName();
+
+            $namevideo = time() . "_" . $video->getClientOriginalName();
             $path = public_path().'/uploads_sepakbola/';
             $video->move($path, $namevideo);
-            $sepakbola->video=$namevideo;
-
-            // $video = $request->file('inputvideo');
-            // // $size = $photo->getSize();
-            // $namevideo = time() . "_" . $video->getClientOriginalName();
-            // $path = public_path().'/uploads_sepakbola/';
-            // $video->move($path, $namevideo);
-
-            // $data['inputvideo'] =  $namevideo;
         }else{
             // $data['inputvideo'] = $sepakbola->namevideo;
             $sepakbola->judul_video = $request->judul_video;
             $sepakbola->deskripsi = $request->deskripsi;
         }
-        // $data['title'] = $request->judul_video;
-        // $data['deskripsi'] = $request->deskripsi;
-
         $sepakbola->update();
         return redirect(route('upload.sepakbola'))->with('success','Data berhasil ditambahkan');
     }
@@ -125,6 +113,7 @@ class SepakbolaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $sepakbola = Sepakbola::find($id)->delete();
+        return redirect()->back()->with('success','Data berhasil dihapus');
     }
 }

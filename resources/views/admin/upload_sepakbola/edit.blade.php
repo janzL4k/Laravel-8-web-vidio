@@ -4,30 +4,20 @@
         <div class="col-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    {{-- <h4 class="card-title">Upload Vidio Sepak Bola</h4> --}}
-
-                    {{-- <div class="card-header "> --}}
                     <h4 class="text-bold float-left">Edit Vidio Sepak Bola</h4>
                     <div class="card-header-action ">
                         <a href="{{ route('upload.sepakbola') }}" class="btn btn-rounded btn-success float-right">
                             Kembali</a>
                     </div>
-                    {{-- </div> --}}
                     <br>
                     <form action="{{ route('sepakbola.update', $sepakbola->id) }}" method="post"
                         enctype="multipart/form-data" style="clear:both">
                         @csrf
-                        {{-- @method('PUT') --}}
-                        {{-- @method('pos') --}}
-                        {{-- @foreach ($sepakbola as $sepakbolas) --}}
-
-
                         <div class="form-group">
                             <label for="title">Judul Video</label>
                             <input type="text" name="judul_video" id="title" class="form-control"
                                 value="{{ $sepakbola->judul_video }}">
                         </div>
-                        {{-- @endforeach --}}
                         <div class="form-group">
                             <label for="deskripsi">Deskripsi Video</label>
                             <textarea class="form-control" name="deskripsi" id="deskripsi"

@@ -4,12 +4,18 @@
         <div class="col-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
+                    <div class="card-header-action ">
+                        <a href="{{ route('upload.basket') }}" class="btn btn-rounded btn-success float-right">
+                            Kembali</a>
+                    </div>
                     <h4 class="card-title">Upload Vidio</h4>
                     <p class="card-description">
-                        Upload Khusus Vidio Bola Basket
-                    </p>
 
-                    <form action="{{ route('admin.basket.store') }}" method="POST" enctype="multipart/form-data">
+                    Upload Khusus Vidio Bola Basket
+                    </p>
+                    <br>
+
+                    <form action="{{ route('bolabasket.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label for="title">Judul Video</label>

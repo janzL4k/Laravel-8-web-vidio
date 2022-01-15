@@ -1,4 +1,4 @@
-     <!-- partial:./partials/_footer.html -->
+     <!-- partial:./partials/_footer.html --> <br><br><br><br><br><br><br><br><br>
      <footer class="footer">
         <div class="card">
             <div class="card-body">

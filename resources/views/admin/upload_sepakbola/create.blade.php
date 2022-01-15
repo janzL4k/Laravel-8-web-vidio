@@ -4,10 +4,15 @@
         <div class="col-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
+                    <div class="card-header-action ">
+                        <a href="{{ route('upload.sepakbola') }}" class="btn btn-rounded btn-success float-right">
+                            Kembali</a>
+                    </div>
                     <h4 class="card-title">Upload Vidio Sepak Bola</h4>
                     <p class="card-description">
                         Upload Khusus Vidio Sepak Bola
                     </p>
+
                     <form action="{{ route('admin.sepakbola.store') }}" method="POST" enctype="multipart/form-data">
                           @csrf
                         <div class="form-group">

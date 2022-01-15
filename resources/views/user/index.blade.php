@@ -6,92 +6,66 @@
     <!-- ##### Hero Area End ##### -->
 
     <!-- ##### Trending Posts Area Start ##### -->
-    <section class="trending-posts-area mt-10">
+    <section class="trendingmt-10">
         <div class="container">
             <div class="row">
                 <div class="col-12 mt-8">
                     <!-- Section Heading -->
-                    <div class="section-heading"><br>
+                    <div class="section-heading"><br><br>
                         <h4>Trending Videos</h4>
                         <div class="line"></div>
                     </div>
                 </div>
             </div>
 
-            {{-- <div class="row"> --}}
-            <div class="row row-cols-1 row-cols-md-4 p-10  ">
-                <div class="col">
-                    <div class="card">
-                        <video  controls preload="metadata">
-                            @foreach ($sepakbola as $sepak)
+            {{-- batas atas --}}
+            @foreach ($sepakbola as $sepak)
+                <div class="card-content mb-3" style="max-width: 50%; height: 250px; padding:20px; float: left; border-radius: 2%;">
+                    <div class="row g-0 bg-dark">
+                        <div class="col-md-4">
 
-                            @endforeach
-                            <source src=" {{ 'uploads_sepakbola/'.$sepak->video }} "
-                                type="video/mp4" />
-                        </video>
-                        <div class="card-body">
-                            <h5 class="card-title text-primary">Messi is not perfect</h5>
-                            <p class="card-text">Messi is not perfect card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
+                            <video controls preload="metadata" style="width: 100%; padding-top: 35px">
+                                <source src=" {{ 'uploads_sepakbola/' . $sepak->video }} " type="video/mp4" />
+                            </video>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title text-danger">{{ $sepak->judul_video }}</h5>
+                                <p class="card-text">{{ $sepak->deskripsi }}</p>
+                                <p class="card-text"><small class="text-muted">Upload :
+                                        {{ $sepak->created_at }}</small></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card">
-                        <video src=""></video>
-                        <div class="card-body">
-                            <h5 class="card-title text-primary">Messi is not perfect</h5>
-                            <p class="card-text">Messi is not perfect card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <video src=""></video>
-                        <div class="card-body">
-                            <h5 class="card-title text-primary">Messi is not perfect</h5>
-                            <p class="card-text">Messi is not perfect card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row row-cols-1 row-cols-md-4 g-4">
-                <div class="col">
-                    <div class="card">
-                        <video src=""></video>
-                        <div class="card-body">
-                            <a href=""><h5 class="card-title text-primary">Messi is not perfect</h5></a>
-                            <p class="card-text">Messi is not perfect card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <video src=""></video>
-                        <div class="card-body">
-                            <h5 class="card-title text-primary">Messi is not perfect</h5>
-                            <p class="card-text">Messi is not perfect card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <video src=""></video>
-                        <div class="card-body">
-                            <h5 class="card-title text-primary">Messi is not perfect</h5>
-                            <p class="card-text">Messi is not perfect card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
+            @endforeach
+            {{-- batas bawah --}}
+
+               {{-- batas atas --}}
+               @foreach ($basket as $basketer)
+               <div class="card-content mb-3" style="max-width: 50%; height: 250px; padding:20px; float: left; border-radius: 2%;">
+                   <div class="row g-0 bg-dark">
+                       <div class="col-md-4">
+                           <br>
+                           <video controls preload="metadata" style="width: 100%;">
+                               <source src=" {{ 'uploads/' . $basketer->video }} " type="video/mp4" />
+                           </video>
+                       </div>
+                       <div class="col-md-8">
+                           <div class="card-body">
+                               <h5 class="card-title text-danger">{{ $basketer->judul_video }}</h5>
+                               <p class="card-text">{{ $basketer->deskripsi }}</p>
+                               <p class="card-text"><small class="text-muted">Upload :
+                                       {{ $basketer->created_at }}</small></p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+
+           @endforeach
+           {{-- batas bawah --}}
         </div>
+
     </section>
-    <!-- ##### Trending Posts Area End ##### -->
 @endsection

@@ -12,10 +12,14 @@
     <title>Website Olahraga | 2022</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="frontend/img/core-img/favicon.ico">
+    <link rel="icon" href="frontend/img/core-img/oborr.png">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="frontend/style.css">
+
+    {{-- jquery active --}}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
 </head>

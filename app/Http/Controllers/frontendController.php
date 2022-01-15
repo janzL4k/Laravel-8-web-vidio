@@ -9,15 +9,42 @@ use Illuminate\Routing\Controller;
 
 class frontendController extends Controller
 {
-    public function index(){
-        $sepakbola  = Sepakbola::all();
-        // $basket  = Bolabasket::all();
-        return view('frontend.halaman-utama.index', compact('sepakbola'));
-    }
+    // public function index(){
+    //     $sepakbola  = Sepakbola::all();
+    //     // $basket  = Bolabasket::all();
+    //     return view('frontend.halaman-utama.index', compact('sepakbola'));
+    // }
 
     public function depan(){
         $sepakbola  = Sepakbola::all();
-        // $basket  = Bolabasket::all();
-        return view('user.index', compact('sepakbola'));
+        $basket  = Bolabasket::all();
+        return view('user.index', compact('sepakbola','basket'));
     }
+    public function tentang(){
+        $sepakbola  = Sepakbola::find(5);
+        $sepakbola2 =Sepakbola::find(6);
+        $sepakbola3 =Sepakbola::find(2);
+        $basket  = Bolabasket::find(2);
+        $basket1  = Bolabasket::find(3);
+        $basket2  = Bolabasket::find(4);
+        $basket3  = Bolabasket::find(3);
+        return view('user.tentang',compact('sepakbola','sepakbola2','sepakbola3','basket','basket1','basket2','basket3'));
+    }
+
+    public function sepak(){
+        $sepakbola  = Sepakbola::all();
+        return view('user.sepakbola',compact('sepakbola'));
+
+    }
+    public function basket(){
+        $basket  = Bolabasket::all();
+
+        return view('user.bolabasket',compact('basket'));
+    }
+
+public function youtube(){
+    return view('user.youtube');
 }
+
+}
+

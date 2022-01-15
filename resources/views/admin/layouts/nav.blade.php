@@ -8,29 +8,15 @@
         </div>
         <h4 class="font-weight-bold mb-0 d-none d-md-block mt-1"> &nbsp &nbsp Module admin</h4>
         <ul class="navbar-nav navbar-nav-right">
-        </ul>
+
     </div>
     <div class="navbar-menu-wrapper navbar-search-wrapper d-none d-lg-flex align-items-center">
-        </ul>
-        <ul class="navbar-nav navbar-nav-right container" style="float: right">
-            <li class="nav-item nav-profile dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-                    <img src="admin/images/faces/face5.jpg" alt="profile" />
-                    <span class="nav-profile-name">Admin Vidio_project</span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
-                    aria-labelledby="profileDropdown">
-                    <a class="dropdown-item">
-                        <i class="mdi mdi-settings text-primary"></i>
-                        Settings
-                    </a>
-                    <a class="dropdown-item">
-                        <i class="mdi mdi-logout text-primary"></i>
-                        Logout
-                    </a>
-                </div>
-            </li>
-s
-        </ul>
+        {{-- <img src="admin/images/faces/admin.jpg" alt="profile" /> --}}
+        <div class="user br-dark" style="padding-left: 20px;">
+            <i class="mdi mdi-account color-primary bg-dark"></i>
+            <span class="nav-profile-name text-dark font-weight-bold pl-4">Admin Vidio_project</span>
+
+        </div>
+
     </div>
 </nav>

@@ -14,11 +14,11 @@
 
                                 @foreach ($sepakbola as $sepak)
 
-                            <video controls  width="400px" height="350px" autoplay="true">
-                                <source src="{{ 'uploads_sepakbola/' . $sepak->video }}" type="video/mp4" />
-                            </video>
+                                    <video controls width="400px" height="350px" autoplay="true">
+                                        <source src="{{ 'uploads_sepakbola/' . $sepak->video }}" type="video/mp4" />
+                                    </video>
 
-                            @endforeach
+                                @endforeach
                                 <a href="#" class="btn play-btn"><i class="fa fa-play" aria-hidden="true"></i></a>
                                 {{-- @endforeach --}}
                                 <!-- Post Content -->

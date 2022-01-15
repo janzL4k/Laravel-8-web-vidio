@@ -11,9 +11,9 @@
                         </div>
                         <div id="breakingNewsTicker" class="ticker">
                             <ul>
-                                <li><a href="single-post.html">Boruto next generation</a></li>
-                                <li><a href="single-post.html">Da wang rao ming</a></li>
-                                <li><a href="single-post.html">Pikacu</a></li>
+                                <li><a href="single-post.html">The Profesor</a></li>
+                                <li><a href="single-post.html">The King di Lapangan Hijau</a></li>
+                                <li><a href="single-post.html">Messi from PSG</a></li>
                             </ul>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                 <nav class="classy-navbar justify-content-between" id="vizewNav">
 
                     <!-- Nav brand -->
-                    <a href="index.html" class="nav-brand"><img src="frontend/img/core-img/logo.png" alt=""></a>
+                    <a href="depan" class="nav-brand"><img src="frontend/img/core-img/pan.png" style="width: 130px" alt=""></a>
 
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
@@ -69,20 +69,30 @@
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul>
-                                <li class="active"><a href="index.html">Halaman Utama</a></li>
-                                <li><a href="archive-list.html">Tentang Kami</a></li>
-                                <li><a href="#">Genre</a>
+                                <li ><a href="depan">Halaman Utama</a></li>
+                                <script>
+                                    $("ul > li").hover(
+                                        function() {
+                                            $(this).addClass('active');
+                                        }, function() {
+                                            $( this ).removeClass('active');
+                                        }
+                                    );
+                                    $( "ul > li" ).click(function(){
+                                            $(this).toggleClass('active');
+                                    });
+                            </script>
+                                <li><a href="{{ route('tentang') }}">Favorite Videos</a></li>
+                                <li><a href="#">Kategori Olahraga</a>
                                     <ul class="dropdown">
-                                        <li><a href="index.html">Fantasy</a></li>
-                                        <li><a href="archive-list.html">Magic </a></li>
-                                        <li><a href="archive-grid.html">Advanture</a></li>
-                                        <li><a href="single-post.html">Over Power</a></li>
-                                        <li><a href="video-post.html">comedy</a></li>
+                                        <li><a href="{{ route('sepak') }}">Sepak Bola</a></li>
+                                        <li><a href="{{ route('basket') }}">Bola Basket </a></li>
+                                        <li><a href="{{ route('youtube') }}">Youtube Video </a></li>
 
                                     </ul>
                                 </li>
 
-                                <li><a href="contact.html">Contact</a></li>
+
                             </ul>
                         </div>
                         <!-- Nav End -->

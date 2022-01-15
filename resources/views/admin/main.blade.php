@@ -9,13 +9,16 @@
     <!-- base:css -->
     <link rel="stylesheet" href="admin/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="admin/vendors/css/vendor.bundle.base.css">
-    <!-- endinject -->
-    <!-- plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
+
     <link rel="stylesheet" href="admin/css/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="admin/images/favicon.png" />
+
+    {{-- css stisla --}}
+    <!-- General CSS Files -->
+    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> --}}
+
 </head>
 
 <body>
@@ -31,7 +34,7 @@
                     <a class="nav-link" href="backend.dashboard">
                         <i class="mdi mdi-view-quilt menu-icon"></i>
                         <span class="menu-title">Dashboard</span>
-                        <div class="badge badge-info badge-pill">2</div>
+                        {{-- <div class="badge badge-info badge-pill">2</div> --}}
                     </a>
                 </li>
                 <li class="nav-item sidebar-category">
@@ -48,27 +51,24 @@
                     <div class="collapse" id="ui-basic">
                         <ul class="nav flex-column sub-menu">
                             {{-- {{-- <li class="nav-item"> <a class="nav-link" href="admin/pages/ui-features/buttons.html">Buttons</a></li> --}}
-                            <li class="nav-item"> <a class="nav-link" href="{{ route('upload.sepakbola') }}">Sepak Bola</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="{{ route('upload.basket') }}">Bola Basket</a></li>
+                            <li class="nav-item"> <a class="nav-link"
+                                    href="{{ route('upload.sepakbola') }}">Sepak Bola</a></li>
+                            <li class="nav-item"> <a class="nav-link"
+                                    href="{{ route('upload.basket') }}">Bola Basket</a></li>
 
                         </ul>
                     </div>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="mdi mdi-book menu-icon"></i>
-                        <span class="menu-title">Artikel</span>
-                    </a>
-                </li>
+
                 <li class="nav-item sidebar-category">
-                    <p>Pages</p>
+                    <p>Controlls</p>
                     <span></span>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <button class="btn bg-danger btn-sm menu-title">Upgrade to pro</button>
+                        <button class="btn bg-danger btn-sm menu-title">Logout</button>
                     </a>
                 </li>
             </ul>

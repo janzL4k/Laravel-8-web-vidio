@@ -39,9 +39,8 @@
                                                     class="btn btn-success mr-2 btn-sm" {{-- data-id="{{ $j_kategori->id }}" data-name="{{ $j_kategori->kategori }}"
                                             data-slug="{{ $j_kategori->slug }}"> --}}>
                                                     <i class="mdi mdi-pencil"></i></button></a>
-                                            <form method="post">
+                                            <form action="{{route('sepakbola.destroy', $sepakbolas->id)}}" method="post">
                                                 @csrf
-                                                {{-- @method('DELETE') --}}
                                                 <button type="submit" class="btn btn-danger btn-sm"
                                                     onclick="return confirm('Apa Anda yakin ?');"><i
                                                         class="mdi mdi-delete"></i></button>

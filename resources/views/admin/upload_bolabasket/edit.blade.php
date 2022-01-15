@@ -4,32 +4,41 @@
         <div class="col-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Upload Vidio Bola Basket</h4>
-                    <p class="card-description">
-                        Upload Khusus Vidio Bola Basket
-                    </p>
-                    <form class="forms-sample">
+                    <h4 class="text-bold float-left">Edit Vidio Bola Basket</h4>
+                    <div class="card-header-action ">
+                        <a href="{{ route('upload.basket') }}" class="btn btn-rounded btn-success float-right">
+                            Kembali</a>
+                    </div>
+                    <br>
+                    <form action="{{ route('bolabasket.update', $basket->id) }}" method="post"
+                        enctype="multipart/form-data" style="clear:both">
+                        @csrf
                         <div class="form-group">
-                            <label for="exampleInputName1">Judul Video</label>
-                            <input type="text" class="form-control" id="exampleInputName1" placeholder="Judul">
+                            <label for="title">Judul Video</label>
+                            <input type="text" name="judul_video" id="title" class="form-control"
+                                value="{{ $basket->judul_video }}">
                         </div>
                         <div class="form-group">
-                            <label for="exampleTextarea1">Deskripsi Video</label>
-                            <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                            <label for="deskripsi">Deskripsi Video</label>
+                            <textarea class="form-control" name="deskripsi" id="deskripsi"
+                                rows="4">{{ $basket->deskripsi }}</textarea>
                         </div>
                         <div class="form-group">
-                            <label>Upload Video</label>
-
-                            {{-- <input type="file" name="img[]" class="file-upload-default"> --}}
+                            <label for="inputvideo">Upload Video</label><br>
+                            <video width="200" height="200" controls preload="metadata" >
+                                <source src=" {{ 'uploads/' . $basket->video }} " type="video/mp4" />
+                            </video>
                             <div class="input-group col-xs-12">
-                                <input type="file" class="form-control" placeholder="Upload Video"  id="inputvidio">
+                                <input type="file" class="form-control" placeholder="Upload Video" name="inputvideo"
+                                    id="inputvideo">
                                 <span class="input-group-append">
-                                <label class="file-upload-browse btn btn-primary"  for="inputvidio">Upload</label>
+                                    <label class="file-upload-browse btn btn-primary" for="inputvidio">Upload</label>
                                 </span>
                             </div>
+                            <p><span class="text-danger text-bold">*)</span>Kosongkan jika tidak mengedit vidio</p>
                         </div>
                         <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                        <button class="btn btn-light">Cancel</button>
+                        <button class="btn btn-light" hidden>Cancel</button>
                     </form>
                 </div>
             </div>

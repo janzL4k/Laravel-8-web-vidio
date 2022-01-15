@@ -31,19 +31,19 @@
                                     {{-- <video id="my-video" controls width="200" height="200" autoplay="true">
                                         <source src="public.uploads.{{$basketer->video}}" type='video/mp4'>
                                      </video> --}}
-                                     <video width="100" height="100" controls class="thumb" >
-                                        <source src=" uploads.{{($basketer->video) }}">
-                                      </video>
-
+                                     <video width="200" height="200" controls preload="metadata">
+                                        <source src=" {{ 'uploads/' . $basketer->video }} "
+                                            type="video/mp4" />
+                                    </video>
 
                                 </td>
                                 <td>
                                     <div class="d-flex d-inline justify-content-center">
-                                        <a href="{{ route("bolabasket.edit") }}"><button class="btn btn-success mr-2 btn-sm" data-toggle="modal"
+                                        <a href="{{ route("bolabasket.edit",$basketer->id) }}"><button class="btn btn-success mr-2 btn-sm" data-toggle="modal"
                                             data-target="#editSubject" {{-- data-id="{{ $j_kategori->id }}" data-name="{{ $j_kategori->kategori }}"
                                             data-slug="{{ $j_kategori->slug }}"> --}}>
                                             <i class="mdi mdi-pencil"></i></button></a>
-                                        <form method="post">
+                                        <form action="{{route('bolabasket.destroy', $basketer->id)}}" method="POST">
                                             @csrf
                                             {{-- @method('DELETE') --}}
                                             <button type="submit" class="btn btn-danger btn-sm"
