@@ -11,7 +11,7 @@
                     <h4 class="card-title">Upload Vidio</h4>
                     <p class="card-description">
 
-                    Upload Khusus Vidio Bola Basket
+                        Upload Khusus Vidio Bola Basket
                     </p>
                     <br>
 
@@ -19,18 +19,29 @@
                         @csrf
                         <div class="form-group">
                             <label for="title">Judul Video</label>
-                            <input type="text" name="title" id="title" class="form-control" id="exampleInputName1"
-                                placeholder="Judul">
+                            <input type="text" name="title" id="title"
+                                class="form-control @error('title')
+                                is-invalid
+                                @enderror ">
+                            @error('title')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
+
                         </div>
                         <div class="form-group">
                             <label for="deskripsi">Deskripsi Video</label>
-                            <textarea class="form-control" name="deskripsi" id="deskripsi" rows="4"></textarea>
+                            <textarea class="form-control @error('deskripsi') is-invalid @enderror" name="deskripsi"
+                                id="deskripsi" rows="4"></textarea>
+                            @error('deskripsi')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
+
                         <div class="form-group">
                             <label for="inputvideo">Upload Video</label>
                             {{-- <input type="file" name="img[]" class="file-upload-default"> --}}
                             <div class="input-group col-xs-12">
-                                <input type="file" class="form-control" placeholder="Upload Video" name="inputvideo"
+                                <input type="file" class="form-control @error('inputvideo') is-invalid @enderror" placeholder="Upload Video" name="inputvideo"
                                     id="inputvideo">
                                 <span class="input-group-append">
                                     {{-- <label class="file-upload-browse btn btn-primary"  for="inputvidio">Upload</label> --}}

@@ -29,7 +29,7 @@ Route::get('create.basket', [BolabasketController::class, 'create'])->name('crea
 Route::get('bolabasket.edit{id}', [BolabasketController::class, 'edit'])->name('bolabasket.edit');
 Route::POST('bolabasket.store', [BolabasketController::class, 'store'])->name('bolabasket.store');
 Route::post('/basket/delete/{id}',[BolabasketController::class, 'destroy'])->name('bolabasket.destroy');
-Route::POST('/bolabasket/update/{id}',[SepakbolaController::class, 'update'])->name('bolabasket.update');
+Route::POST('/bolabasket/update/{id}',[BolabasketController::class, 'update'])->name('bolabasket.update');
 
 // Route Sepak Bola
 Route::get('upload.sepakbola', [SepakbolaController::class, 'index'])->name('upload.sepakbola');

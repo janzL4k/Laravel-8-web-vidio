@@ -32,7 +32,6 @@
                             </div>
                         </div>
                     </div>
-
                     {{-- batas 0====== --}}
                     {{-- awal --}}
                     <div class="tab-pane fade" id="post-1" role="tabpanel" aria-labelledby="post-1-tab">
@@ -105,11 +104,9 @@
                             {{-- @foreach ($sepakbola as $sepak) --}}
                             <video controls preload="metadata" style="width: 100%;">
                                 <source src=" {{ 'uploads/' . $basket->video }} " type="video/mp4" />
-                                {{-- </video> --}}
-                                {{-- @endforeach --}}
-                                <!-- Post Content -->
+                                </video>
+
                                 <div class="post-content">
-                                    <a href="#" class="post-cata">{{ $basket->judul_video }}</a>
                                     <a href="single-post.html" class="post-title">{{$basket->judul_video}}</a>
                                     <div class="post-meta d-flex">
                                         <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 25</a>
@@ -117,10 +114,9 @@
                                         <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 25</a>
                                     </div>
                                 </div>
-
                                 <!-- Video Duration -->
-                                <span class="video-duration">05.03</span>
-                        </div>
+                            </div>
+
                     </div>
                     <div class="tab-pane fade" id="post-5" role="tabpanel" aria-labelledby="post-5-tab">
                         <!-- Single Feature Post -->
@@ -130,11 +126,9 @@
                             {{-- @foreach ($sepakbola as $sepak) --}}
                             <video controls preload="metadata" style="width: 100%;">
                                 <source src=" {{ 'uploads/' . $basket3->video }} " type="video/mp4" />
-                                {{-- </video> --}}
-                                {{-- @endforeach --}}
-                                <!-- Post Content -->
+                                </video>
                                 <div class="post-content">
-                                    <a href="#" class="post-cata">{{ $basket3->judul_video }}</a>
+
                                     <a href="single-post.html" class="post-title">{{$basket3->judul_video}}</a>
                                     <div class="post-meta d-flex">
                                         <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 25</a>
@@ -148,43 +142,20 @@
                         </div>
                     </div>
 
-                    <div class="tab-pane fade" id="post-5" role="tabpanel" aria-labelledby="post-5-tab">
-                        <!-- Single Feature Post -->
-                        <div class="single-feature-post video-post bg-img" style="background-image: url(img/bg-img/7.jpg);">
-                            <!-- Play Button -->
-                            <a href="video-post.html" class="btn play-btn"><i class="fa fa-play"
-                                    aria-hidden="true"></i></a>
-
-                            <!-- Post Content -->
-                            <div class="post-content">
-                                <a href="#" class="post-cata">{{ $basket->judul_video  }}</a>
-                                <a href="single-post.html" class="post-title">Reunification of migrant
-                                    toddlers, parents should be completed Thursday</a>
-                                <div class="post-meta d-flex">
-                                    <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 25</a>
-                                    <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 25</a>
-                                    <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 25</a>
-                                </div>
-                            </div>
-
-                            <!-- Video Duration -->
-                            <span class="video-duration">05.03</span>
-                        </div>
-                    </div>
-
-                    <div class="tab-pane fade" id="post-6" role="tabpanel" aria-labelledby="post-6-tab">
+                    <div class="tab-pane fade" id="post-6" role="tabpanel" aria-labelledby="post-5-tab">
                         <!-- Single Feature Post -->
                         <div class="single-feature-post video-post bg-img"
-                            style="background-image: url(img/bg-img/10.jpg);">
-                            <!-- Play Button -->
-                            <a href="video-post.html" class="btn play-btn"><i class="fa fa-play"
-                                    aria-hidden="true"></i></a>
-
+                        style="background-image: url(img/bg-img/10.jpg);">
+                        <!-- Play Button -->
+                        {{-- @foreach ($sepakbola as $sepak) --}}
+                        <video controls preload="metadata" style="width: 100%;">
+                            <source src=" {{ 'uploads/' . $basket4->video }} " type="video/mp4" />
+                            </video>
+                            {{-- @endforeach --}}
                             <!-- Post Content -->
                             <div class="post-content">
-                                <a href="#" class="post-cata">Sports</a>
-                                <a href="single-post.html" class="post-title">Reunification of migrant
-                                    toddlers, parents should be completed Thursday</a>
+
+                                <a href="single-post.html" class="post-title">{{$basket4->judul_video}}</a>
                                 <div class="post-meta d-flex">
                                     <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 25</a>
                                     <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 25</a>
@@ -194,31 +165,7 @@
 
                             <!-- Video Duration -->
                             <span class="video-duration">05.03</span>
-                        </div>
                     </div>
-
-                    <div class="tab-pane fade" id="post-7" role="tabpanel" aria-labelledby="post-7-tab">
-                        <!-- Single Feature Post -->
-                        <div class="single-feature-post video-post bg-img" style="background-image: url(img/bg-img/7.jpg);">
-                            <!-- Play Button -->
-                            <a href="video-post.html" class="btn play-btn"><i class="fa fa-play"
-                                    aria-hidden="true"></i></a>
-
-                            <!-- Post Content -->
-                            <div class="post-content">
-                                <a href="#" class="post-cata">Sports</a>
-                                <a href="single-post.html" class="post-title">Reunification of migrant
-                                    toddlers, parents should be completed Thursday</a>
-                                <div class="post-meta d-flex">
-                                    <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 25</a>
-                                    <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 25</a>
-                                    <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 25</a>
-                                </div>
-                            </div>
-
-                            <!-- Video Duration -->
-                            <span class="video-duration">05.03</span>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -282,7 +229,7 @@
                             <!-- Single Blog Post -->
                             <div class="single-blog-post style-2 d-flex align-items-center">
                                 <div class="post-thumbnail">
-                                    <img src="stisla/basket2.PNG" alt="">
+                                    <img src="stisla/basket3.PNG" alt="">
                                 </div>
                                 <div class="post-content">
                                     <h6 class="post-title">{{ $basket->judul_video }} Skill Dewa</h6>
@@ -298,7 +245,7 @@
                             <!-- Single Blog Post -->
                             <div class="single-blog-post style-2 d-flex align-items-center">
                                 <div class="post-thumbnail">
-                                    <img src="img/bg-img/4.jpg" alt="">
+                                    <img src="stisla/basket2.PNG" alt="">
                                 </div>
                                 <div class="post-content">
                                     <h6 class="post-title">{{ $basket1->judul_video }}</h6>
@@ -318,7 +265,7 @@
                             <!-- Single Blog Post -->
                             <div class="single-blog-post style-2 d-flex align-items-center">
                                 <div class="post-thumbnail">
-                                    <img src="img/bg-img/6.jpg" alt="">
+                                    <img src="stisla/basket4.PNG" alt="">
                                 </div>
                                 <div class="post-content">
                                     <h6 class="post-title">{{ $basket2->judul_video }}</h6>
@@ -326,26 +273,6 @@
                                         <span><i class="fa fa-comments-o" aria-hidden="true"></i> 24</span>
                                         <span><i class="fa fa-eye" aria-hidden="true"></i> 98</span>
                                         <span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 63</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" id="post-7-tab" data-toggle="pill" href="#post-7" role="tab"
-                            aria-controls="post-7" aria-selected="false">
-                            <!-- Single Blog Post -->
-                            <div class="single-blog-post style-2 d-flex align-items-center">
-                                <div class="post-thumbnail">
-                                    <img src="img/bg-img/4.jpg" alt="">
-                                </div>
-                                <div class="post-content">
-                                    <h6 class="post-title">Meet the 12 boys rescued from cave</h6>
-                                    <div class="post-meta d-flex justify-content-between">
-                                        <span><i class="fa fa-comments-o" aria-hidden="true"></i> 14</span>
-                                        <span><i class="fa fa-eye" aria-hidden="true"></i> 34</span>
-                                        <span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</span>
                                     </div>
                                 </div>
                             </div>

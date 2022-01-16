@@ -40,6 +40,16 @@ class SepakbolaController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request,[
+            'title'=>'required',
+        'deskripsi'=>'required',
+        'inputvideo'=>'required|mimes:mp4'
+        ], [
+            'title.required'=>'Judul wajib di isi',
+            'deskripsi.required'=>'Deskripsi wajib di isi',
+            'inputvideo.required'=>'Vidio belum diupload'
+
+        ]);
         $video = $request->file('inputvideo');
         $namevideo =time() . '.' .$video->getClientOriginalName();
         $path = public_path().'/uploads_sepakbola/';

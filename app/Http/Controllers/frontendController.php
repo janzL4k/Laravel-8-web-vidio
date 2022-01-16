@@ -28,7 +28,8 @@ class frontendController extends Controller
         $basket1  = Bolabasket::find(3);
         $basket2  = Bolabasket::find(4);
         $basket3  = Bolabasket::find(3);
-        return view('user.tentang',compact('sepakbola','sepakbola2','sepakbola3','basket','basket1','basket2','basket3'));
+        $basket4  = Bolabasket::find(4);
+        return view('user.tentang',compact('sepakbola','sepakbola2','sepakbola3','basket','basket1','basket2','basket3','basket4'));
     }
 
     public function sepak(){

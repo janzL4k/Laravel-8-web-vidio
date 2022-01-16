@@ -58,7 +58,7 @@
                                         <div class="d-flex justify-content-between traffic-status">
                                             <div class="item">
                                                 <p class="mb-4 font-weight-bold" style="font-size: 16px">Bulu Tangkis</p>
-                                                <h5 class="font-weight-bold mb-0">{{ $basket }}</h5>
+                                                <h5 class="font-weight-bold mb-0">2</h5>
                                                 <div class="color-border"></div>
                                             </div>
                                         </div>

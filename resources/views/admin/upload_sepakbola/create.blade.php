@@ -14,24 +14,44 @@
                     </p>
 
                     <form action="{{ route('admin.sepakbola.store') }}" method="POST" enctype="multipart/form-data">
-                          @csrf
+                        @csrf
                         <div class="form-group">
                             <label for="title">Judul Video</label>
-                            <input type="text" name="title" id="titile" class="form-control" id="exampleInputName1" placeholder="Judul">
+                            <input type="text" name="title" id="titile"
+                                class="form-control @error('title')is-invalid
+                            @enderror"
+                                id="exampleInputName1">
+                            @error('title')
+                                <span class="text-danger">Judul Harus Di isi</span>
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label for="deskripsi">Deskripsi Video</label>
-                            <textarea class="form-control" name="deskripsi" id="deskripsi" rows="4"></textarea>
+                            <textarea
+                                class="form-control @error('deskripsi')is-invalid
+                            @enderror"" name="
+                                deskripsi" id="deskripsi" rows="4"></textarea>
+                            @error('deskripsi')
+                                <span class="text-danger">Deskripsi Harus Di isi</span>
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label for="inputvideo">Upload Video</label>
                             {{-- <input type="file" name="img[]" class="file-upload-default"> --}}
                             <div class="input-group col-xs-12">
-                                <input type="file" class="form-control" placeholder="Upload Video" name="inputvideo" id="inputvideo">
+                                <input type="file"
+                                    class="form-control @error('inputvideo')is-invalid
+                                @enderror"  name="
+                                    inputvideo" id="inputvideo">
+
                                 <span class="input-group-append">
-                                {{-- <label class="file-upload-browse btn btn-primary"  for="inputvidio">Upload</label> --}}
+                                    {{-- <label class="file-upload-browse btn btn-primary"  for="inputvidio">Upload</label> --}}
                                 </span>
+
                             </div>
+                            @error('inputvideo')
+                            <span class="text-danger">Vidio Harus Di isi</span>
+                        @enderror
                         </div>
                         <button type="submit" class="btn btn-primary mr-2">Submit</button>
                         <button class="btn btn-light" hidden>Cancel</button>

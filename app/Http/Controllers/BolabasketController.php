@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Sepakbola;
+// use App\Models\Sepakbola;
 use App\Models\Bolabasket;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Validation\Factory;
 
 class BolabasketController extends Controller
 {
@@ -39,6 +40,17 @@ class BolabasketController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request,[
+            'title'=>'required',
+        'deskripsi'=>'required',
+        'inputvideo'=>'required|mimes:mp4'
+        ], [
+            'title.required'=>'Judul wajib di isi',
+            'deskripsi.required'=>'Deskripsi wajib di isi',
+            'inputvideo.required'=>'Vidio belum diupload'
+        ]);
+
+        // get video
         $video = $request->file('inputvideo');
         $namevideo =time() . '.' .$video->getClientOriginalName();
         $path = public_path().'/uploads/';
@@ -50,7 +62,10 @@ class BolabasketController extends Controller
             'deskripsi' => $request->deskripsi,
             'video' => $namevideo,
         ]);
-        return redirect(route('upload.basket'))->with('success','Data berhasil ditambahkan');
+
+        session()->flash("success", "Data Berhasil Ditambahkan");
+        return redirect()->route("upload.basket");
+        // return redirect(route('upload.basket'))->with('success','Data berhasil ditambahkan');
     }
 
     /**
@@ -93,7 +108,7 @@ class BolabasketController extends Controller
             $video =$request->video;
 
             $namevideo = time() . "_" . $video->getClientOriginalName();
-            $path = public_path().'/uploads_sepakbola/';
+            $path = public_path().'/uploads/';
             $video->move($path, $namevideo);
         }else{
             // $data['inputvideo'] = $sepakbola->namevideo;
@@ -101,7 +116,7 @@ class BolabasketController extends Controller
             $basket->deskripsi = $request->deskripsi;
         }
         $basket->update();
-        return redirect(route('upload.sepakbola'))->with('success','Data berhasil ditambahkan');
+        return redirect(route('upload.basket'))->with('success','Data berhasil ditambahkan');
     }
 
     /**
