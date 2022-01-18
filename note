@@ -1,0 +1,31 @@
+Website video 
+Website Video dibuat menggunakan framework Laravel 
+webstie ini terdiri dari 2 sisi, Backend dan Frontend
+
+1. Backend
+    menggunakan template Spica 
+    Spica  Bootstrap 4 dan sudah menggunakan HTML 5 =>Admin Dashboard Template
+    
+    Menu backend
+    1. Dashboard
+    2. Upload video untuk sepak Bola
+    3. Upload video untuk Basket
+
+    Didalam Upload Sepak Bola dan basket
+        => Dashboard sepak bola dan basket
+            file yang sudah di upload, Tambah data, edit dan hapus
+        => Didalam Tambah data
+            Form Input Judul, dekskripsi dan video
+
+
+2. Frontend
+    Vizew – Free Bootstrap 4 HTML5 Magazine Website Template untuk public
+
+    1. Halaman Utama
+    2. Favorit video
+    3. Kategori Olahraga:
+        a. Sepakbola
+        b. Bola basket
+        c. Youtube video (kumpulan video youtube)
+
+    
