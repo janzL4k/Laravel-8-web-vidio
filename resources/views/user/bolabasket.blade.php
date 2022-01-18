@@ -18,7 +18,7 @@
                 </div>
             </div>
             @foreach ($basket as $basketer)
-            <div class="card bg-dark mb-3" style="max-width: 100%; height: 250px; padding:10px;">
+            <div class="card bg-dark mb-3" style="max-width: 100%; height: 300px;">
                 <div class="row g-0">
                   <div class="col-md-4">
                     <br>

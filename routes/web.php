@@ -48,6 +48,6 @@ Route::get('/sepak', [frontendController::class, 'sepak'])->name('sepak');
 Route::get('/basket', [frontendController::class, 'basket'])->name('basket');
 Route::get('/youtube', [frontendController::class, 'youtube'])->name('youtube');
 
-
-// Route vidio youtube ======
-
+// Route detail ======
+Route::get('sepakbola.details{id}', [FrontendController::class, 'details'])->name('sepakbola.details');
+Route::get('detail', [FrontendController::class, 'show_detail'])->name('detail');

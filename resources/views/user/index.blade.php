@@ -30,7 +30,9 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title text-danger">{{ $sepak->judul_video }}</h5>
+                                <a href="{{ route('sepakbola.details', $sepak->id) }}">
+                                    <h5 class="card-title text-danger">{{ $sepak->judul_video }}</h5>
+                                </a>
                                 <p class="card-text">{{ $sepak->deskripsi }}</p>
                                 <p class="card-text"><small class="text-muted">Upload :
                                         {{ $sepak->created_at }}</small></p>

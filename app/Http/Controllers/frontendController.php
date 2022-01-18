@@ -23,7 +23,7 @@ class frontendController extends Controller
     public function tentang(){
         $sepakbola  = Sepakbola::find(5);
         $sepakbola2 =Sepakbola::find(6);
-        $sepakbola3 =Sepakbola::find(2);
+        $sepakbola3 =Sepakbola::find(9);
         $basket  = Bolabasket::find(2);
         $basket1  = Bolabasket::find(3);
         $basket2  = Bolabasket::find(4);
@@ -46,6 +46,14 @@ class frontendController extends Controller
 public function youtube(){
     return view('user.youtube');
 }
+
+public function details($id){
+
+    $sepakbola = Sepakbola::find($id);
+    return view("user.detail.details", compact('sepakbola'));
+
+}
+
 
 }
 

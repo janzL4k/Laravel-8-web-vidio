@@ -27,10 +27,9 @@
                         </div>
                         <div class="form-group">
                             <label for="deskripsi">Deskripsi Video</label>
-                            <textarea
+                            <textarea name="deskripsi"
                                 class="form-control @error('deskripsi')is-invalid
-                            @enderror"" name="
-                                deskripsi" id="deskripsi" rows="4"></textarea>
+                            @enderror" id="exampel" ></textarea>
                             @error('deskripsi')
                                 <span class="text-danger">Deskripsi Harus Di isi</span>
                             @enderror
@@ -39,10 +38,9 @@
                             <label for="inputvideo">Upload Video</label>
                             {{-- <input type="file" name="img[]" class="file-upload-default"> --}}
                             <div class="input-group col-xs-12">
-                                <input type="file"
+                                <input type="file"  name="inputvideo"
                                     class="form-control @error('inputvideo')is-invalid
-                                @enderror"  name="
-                                    inputvideo" id="inputvideo">
+                                @enderror"  id="inputvideo">
 
                                 <span class="input-group-append">
                                     {{-- <label class="file-upload-browse btn btn-primary"  for="inputvidio">Upload</label> --}}
