@@ -50,4 +50,5 @@ Route::get('/youtube', [frontendController::class, 'youtube'])->name('youtube');
 
 // Route detail ======
 Route::get('sepakbola.details{id}', [FrontendController::class, 'details'])->name('sepakbola.details');
-Route::get('detail', [FrontendController::class, 'show_detail'])->name('detail');
+Route::get('detail', [FrontendController::class, 'detail'])->name('detail');
+Route::get('detail_basket{id}', [FrontendController::class, 'detail_basket'])->name('detail_basket');

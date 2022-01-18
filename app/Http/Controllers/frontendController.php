@@ -55,5 +55,13 @@ public function details($id){
 }
 
 
+
+public function detail_basket($id){
+
+    $basket = Bolabasket::find($id);
+    return view("user.detail.detail_basket", compact('basket'));
+
+}
+
 }
 

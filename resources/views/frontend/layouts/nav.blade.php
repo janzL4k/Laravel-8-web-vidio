@@ -7,7 +7,7 @@
                     <!-- Breaking News Widget -->
                     <div class="breaking-news-area d-flex align-items-center">
                         <div class="news-title">
-                            <p>Best Anime:</p>
+                            <p>Best Video:</p>
                         </div>
                         <div id="breakingNewsTicker" class="ticker">
                             <ul>
